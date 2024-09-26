@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const authRouter = require('./routes/auth/auth-routes');
 
-
+//const 
   mongoose.connect('mongodb+srv://lokeswararaodumpala2004:2zo7qgz34ki0S8Yc@cluster0.x7zlw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then( () => console.log("MongoDB connected") )
         .catch((error) => console.log(error));
 const app = express();
