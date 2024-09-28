@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const authRouter = require('./routes/auth/auth-routes');
-
+const adminProductsRouter = require('./routes/admin/products-routes');
+const shopProductsRouter = require('./routes/shop/products-routes');
 
   mongoose.connect('mongodb+srv://lokeswararaodumpala2004:2zo7qgz34ki0S8Yc@cluster0.x7zlw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then( () => console.log("MongoDB connected") )
         .catch((error) => console.log(error));
@@ -30,5 +31,8 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use('/api/auth',authRouter);
+app.use('/api/admin/products',adminProductsRouter);
+app.use('/api/shop/products',shopProductsRouter);
+
 
 app.listen(PORT,()=> console.log("Server started"));

@@ -1,5 +1,6 @@
+import './App.css';
 
-import './App.css'
+
 import { Route, Routes } from 'react-router-dom'
 import AuthLayout from './components/auth/layout'
 import AuthLogin from './pages/auth/login'
@@ -34,7 +35,7 @@ function App() {
 
   if(isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />
   return (
-      <div className='flex flex-col overflow-hidden bg-white'>
+      <div className="flex flex-col overflow-hidden bg-white ">
         
         <Routes >
            <Route path="/auth" element={ <CheckAuth isAuthenticated={isAuthenticated} user={user} >

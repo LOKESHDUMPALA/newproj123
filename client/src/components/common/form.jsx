@@ -1,7 +1,7 @@
 
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
-import { Select, SelectContent, SelectTrigger, SelectValue } from '../ui/select';
+import { Select, SelectContent, SelectTrigger, SelectValue,SelectItem } from '../ui/select';
 import { Textarea } from '../ui/textarea';
 import React from 'react';
 import { Button } from '../ui/button';
@@ -44,7 +44,7 @@ function CommonForm({  formControls,
                             })
                           } value={value}>
                             <SelectTrigger className='w-full'>
-                                <SelectValue placeholder={getControlItem.placeholder}/>
+                                <SelectValue placeholder={getControlItem.label}/>
                             </SelectTrigger>
                             <SelectContent>
                             {
