@@ -1,5 +1,5 @@
 import CommonForm from "@/components/common/form";
-import { LoginFormControls } from "@/config";
+import { loginFormControls } from "../../config/index";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -44,7 +44,7 @@ function AuthLogin(){
          </p>
       </div>
       <CommonForm 
-        formControls={LoginFormControls}
+        formControls={loginFormControls}
         buttonText={'Sign In'}
         formData={formData}
         setFormData={setFormData}
