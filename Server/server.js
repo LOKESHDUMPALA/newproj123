@@ -35,3 +35,4 @@ app.use('/api/admin/products',adminProductsRouter);
 app.use('/api/shop/products',shopProductsRouter);
 
 app.listen(PORT,()=> console.log("Server started"));
+// listen 4000
