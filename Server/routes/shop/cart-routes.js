@@ -1,0 +1,12 @@
+const express = require('express');
+
+const { addToCart, updateCartItemQty, fetchCartItems , deleteCartItem} = require('../../controllers/shop/cart-controllers');
+
+const router = express.Router();
+
+router.post('/add', addToCart);
+router.get('/get/:userId',fetchCartItems);
+router.put('/update-cart',updateCartItemQty);
+router.delete('/:userId/:productId',deleteCartItem);
+
+module.exports = router;

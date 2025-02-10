@@ -18,8 +18,6 @@ function ProductImageUpload({
 }) {
   const inputRef = useRef(null);
 
-  console.log(isEditMode, "isEditMode");
-
   function handleImageFileChange(event) {
     console.log(event.target.files, "event.target.files");
     const selectedFile = event.target.files?.[0];
@@ -50,10 +48,10 @@ function ProductImageUpload({
     const data = new FormData();
     data.append("my_file", imageFile);
     const response = await axios.post(
-      "http://localhost:4000/api/admin/products/upload-image",
+      `${import.meta.env.VITE_API_URL}/api/admin/products/upload-image`,
       data
     );
-    console.log(response, "response");
+   
 
     if (response?.data?.success) {
       setUploadedImageUrl(response.data.result.url);
