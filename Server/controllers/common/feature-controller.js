@@ -27,7 +27,7 @@ const getFeatureImages = async(req,res) => {
     try{
         
         const images  = await Feature.find({});
-        console.log(images,"img");
+       
         res.status(200).json({
             success : true,
             data : images
